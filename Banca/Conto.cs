@@ -17,9 +17,9 @@ namespace Banca
 
         public override string ToString()
         {
-            return $"Il tuo saldo è di {Saldo}";
+         string mex=   base.ToString();
+          return $"{mex}, il tuo saldo è di {Saldo}";
         }
-
         public double Prelievo(double prelievo)
         {
             if(prelievo > Saldo)
