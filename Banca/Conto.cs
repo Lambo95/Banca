@@ -22,7 +22,14 @@ namespace Banca
 
         public double Prelievo(double prelievo)
         {
-            return Saldo -= prelievo;
+            if(prelievo > Saldo)
+            {
+                Console.WriteLine($"Non hai soldi sufficienti! Il tuo saldo è di {Saldo}");
+            }
+            else {
+                Saldo -= prelievo;
+            }
+            return Saldo;
         }
 
         public double Versamento(double versamento)

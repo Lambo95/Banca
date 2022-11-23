@@ -8,12 +8,13 @@ namespace Banca
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
-            esegui();
+            Esegui();
         }
 
-        private static void esegui()
+        private static void Esegui()
         {
             bool schermo = true;
             Conto conto = CreaConto();
@@ -23,8 +24,6 @@ namespace Banca
                 
             }
         }
-
-
 
         public static Conto CreaConto()
         {
@@ -64,8 +63,6 @@ namespace Banca
             return versamento;
         }
 
-
-
         public static bool SchermoMenu()
         {
             Console.WriteLine("-------------------------------------------------------");
@@ -81,7 +78,7 @@ namespace Banca
                 case "0":
                     return false;
                 case "1":
-                   esegui();
+                   Esegui();
                     return false;
                 default:
                     return true;
